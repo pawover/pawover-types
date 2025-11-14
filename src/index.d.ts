@@ -13,6 +13,6 @@ declare global {
   type AsyncFunc<P extends any[] = any[], R = any> = (...arg: P) => Promise<R>;
 }
 
-export type * from "./api";
-export type * from "./responsive";
+export type * from "./global/api";
+export type * from "./global/responsive";
 
