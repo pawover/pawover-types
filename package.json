@@ -1,0 +1,67 @@
+{
+  "name": "@pawover/types",
+  "author": "pawover<pawover@outlook.com>",
+  "description": "pawover's types",
+  "license": "MIT",
+  "type": "module",
+  "version": "0.0.0-alpha.3",
+  "packageManager": "pnpm@10.20.0",
+  "engines": {
+    "node": ">=22.20.0"
+  },
+  "keywords": [
+    "pawover",
+    "pawover-types"
+  ],
+  "main": "./dist/types/index.d.ts",
+  "module": "./dist/types/index.d.ts",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist/types"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts"
+    },
+    "./*": {
+      "types": "./dist/types/*.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "public": "npm publish --access public",
+    "check": "pnpm check:types & pnpm check:eslint & pnpm check:format",
+    "check:types": "tsc --noEmit",
+    "check:eslint": "eslint --fix \"**/*.{js,cjs,mjs,ts,cts,mts,jsx,tsx,vue}\" --cache-location=eslint.cache.json --cache",
+    "check:format": "prettier --write \"**/*.{html,json}\" !.vscode/settings.json --cache-location=prettier.cache.json --cache",
+    "clean": "pnpm clean:cache & pnpm clean:lib",
+    "clean:cache": "rimraf -g **/*.cache.json **/auto-*.json **/auto-*.d.ts",
+    "clean:lib": "rimraf -g **/node_modules",
+    "clean:output": "rimraf -g dist",
+    "lib:up": "taze -I -r --exclude pnpm"
+  },
+  "devDependencies": {
+    "@pawover/eslint-rules": "0.0.0-alpha.3",
+    "@stylistic/eslint-plugin": "^5.5.0",
+    "@types/react": "^19.2.4",
+    "eslint": "^9.39.1",
+    "eslint-plugin-antfu": "^3.1.1",
+    "globals": "^16.5.0",
+    "prettier": "^3.6.2",
+    "rimraf": "^6.1.0",
+    "taze": "^19.9.0",
+    "type-fest": "^5.2.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.4"
+  },
+  "peerDependencies": {
+    "@types/react": ">=19.2.4",
+    "type-fest": ">=5.2.0",
+    "typescript": ">=5.9.3"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    }
+  }
+}
