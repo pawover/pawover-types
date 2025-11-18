@@ -18,22 +18,23 @@
     "type": "git",
     "url": "https://github.com/pawover/pawover-types.git"
   },
-  "main": "./src/index.d.ts",
-  "module": "./src/index.d.ts",
-  "types": "./src/index.d.ts",
+  "main": "./dist/types/index.d.ts",
+  "module": "./dist/types/index.d.ts",
+  "types": "./dist/types/index.d.ts",
   "files": [
-    "src"
+    "dist/types"
   ],
   "exports": {
     ".": {
-      "types": "./src/index.d.ts"
+      "types": "./dist/types/index.d.ts"
     },
     "./*": {
-      "types": "./src/*.d.ts"
+      "types": "./dist/types/*.d.ts"
     }
   },
   "scripts": {
-    "public": "npm publish --access public",
+    "build": "tsc",
+    "public": "pnpm build && npm publish --access public",
     "check": "pnpm check:types & pnpm check:eslint & pnpm check:format",
     "check:types": "tsc --noEmit",
     "check:eslint": "eslint --fix \"**/*.{js,cjs,mjs,ts,cts,mts,jsx,tsx,vue}\" --cache-location=eslint.cache.json --cache",
