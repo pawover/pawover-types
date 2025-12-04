@@ -4,7 +4,7 @@
   "description": "pawover's types",
   "license": "MIT",
   "type": "module",
-  "version": "0.0.0-alpha.6",
+  "version": "0.0.0-alpha.7",
   "packageManager": "pnpm@10.20.0",
   "engines": {
     "node": ">=22.20.0"
@@ -18,22 +18,22 @@
     "type": "git",
     "url": "https://github.com/pawover/pawover-types.git"
   },
-  "main": "./dist/types/index.d.ts",
-  "module": "./dist/types/index.d.ts",
-  "types": "./dist/types/index.d.ts",
+  "main": "./dist/index.d.ts",
+  "module": "./dist/index.d.ts",
+  "types": "./dist/index.d.ts",
   "files": [
-    "dist/types"
+    "dist"
   ],
   "exports": {
     ".": {
-      "types": "./dist/types/index.d.ts"
+      "types": "./dist/index.d.ts"
     },
     "./*": {
-      "types": "./dist/types/*.d.ts"
+      "types": "./dist/*.d.ts"
     }
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsdown",
     "public": "pnpm build && npm publish --access public",
     "check": "pnpm check:types & pnpm check:eslint & pnpm check:format",
     "check:types": "tsc --noEmit",
@@ -46,23 +46,25 @@
     "clean:output": "rimraf dist",
     "lib:up": "taze -I -r --exclude pnpm"
   },
+  "dependencies": {
+    "@types/react": "^19.2.4",
+    "typescript": "^5.9.3"
+  },
   "devDependencies": {
     "@pawover/eslint-rules": "0.0.0-alpha.8",
     "@stylistic/eslint-plugin": "^5.5.0",
-    "@types/react": "^19.2.4",
     "eslint": "^9.39.1",
     "eslint-plugin-antfu": "^3.1.1",
     "globals": "^16.5.0",
     "prettier": "^3.6.2",
     "rimraf": "^6.1.0",
     "taze": "^19.9.0",
+    "tsdown": "0.16.8",
     "type-fest": "^5.2.0",
-    "typescript": "^5.9.3",
     "typescript-eslint": "^8.46.4"
   },
   "peerDependencies": {
     "@types/react": ">=19.2.4",
-    "type-fest": ">=5.2.0",
     "typescript": ">=5.9.3"
   },
   "peerDependenciesMeta": {

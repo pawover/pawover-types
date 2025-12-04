@@ -9,10 +9,13 @@
     "allowImportingTsExtensions": true,
     "allowUmdGlobalAccess": true,
     "allowJs": true,
+    "checkJs": true,
     "strict": true,
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "exactOptionalPropertyTypes": false,
+    "experimentalDecorators": true,
+    "erasableSyntaxOnly": true,
     "noImplicitAny": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
@@ -22,9 +25,6 @@
     "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
     "noUnusedParameters": false,
-    "noEmit": false,
-    "emitDeclarationOnly": true,
-    "declaration": true,
     "useDefineForClassFields": true,
     "verbatimModuleSyntax": true
   }

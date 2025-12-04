@@ -8,9 +8,11 @@ declare global {
   /** 描述树类型 */
   type TreeLike<T extends AnyObject, CK extends string = "children"> = T & Record<CK, TreeLike<T, CK>[]>;
   /** 描述函数类型 */
-  type Func<P extends any[] = any[], R = any> = (...arg: P) => R;
+  type AnyFunction<P extends any[] = any[], R = any> = (...arg: P) => R;
   /** 描述异步函数类型 */
-  type AsyncFunc<P extends any[] = any[], R = any> = (...arg: P) => Promise<R>;
+  type AnyAsyncFunction<P extends any[] = any[], R = any> = (...args: P) => Promise<R>;
+  type AnyGeneratorFunction<P extends any[] = any[], T = any, R = any, N = any> = (...args: P) => Generator<T, R, N>;
+  type AnyAsyncGeneratorFunction<P extends any[] = any[], T = any, R = any, N = any> = (...args: P) => AsyncGenerator<T, R, N>;
 }
 
 export type * from "./global/api";

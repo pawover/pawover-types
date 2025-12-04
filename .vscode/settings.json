@@ -1,5 +1,4 @@
 {
-  "material-icon-theme.activeIconPack": "react",
   "editor.codeActionsOnSave": {
     "source.fixAll": "never",
     "source.fixAll.eslint": "explicit",
