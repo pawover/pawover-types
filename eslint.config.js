@@ -59,9 +59,15 @@ export default defineConfig([
   },
   {
     files: ["**/*.{js,cjs,mjs}"],
-    plugins: { ...plugins.stylistic, ...plugins.antfu },
+    plugins: {
+      ...plugins.stylistic,
+      ...plugins.antfu,
+    },
     languageOptions: {
-      globals: { ...globals.browser, ...globals.es2020 },
+      globals: {
+        ...globals.browser,
+        ...globals.es2020,
+      },
       parserOptions: {
         ecmaFeatures: {
           jsx: false,
@@ -76,7 +82,11 @@ export default defineConfig([
   },
   {
     files: ["**/*.{ts,cts,mts,tsx}"],
-    plugins: { ...plugins.ts, ...plugins.stylistic, ...plugins.antfu },
+    plugins: {
+      ...plugins.ts,
+      ...plugins.stylistic,
+      ...plugins.antfu,
+    },
     languageOptions: {
       parser: eslintTs.parser,
       parserOptions: {

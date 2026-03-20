@@ -14,3 +14,4 @@ export type AnyGeneratorFunction<P extends any[] = any[], T = any, R = any, N = 
 export type AnyAsyncGeneratorFunction<P extends any[] = any[], T = any, R = any, N = any> = (...args: P) => AsyncGenerator<T, R, N>;
 
 export type * from "./api";
+export type * from "./advancedRecord";
