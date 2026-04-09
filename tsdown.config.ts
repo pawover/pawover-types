@@ -6,6 +6,9 @@ export default defineConfig([
       index: "src/index.ts",
       react: "src/react.ts",
     },
+    deps: {
+      alwaysBundle: ["type-fest"],
+    },
     dts: true,
     target: "es2020",
     platform: "neutral",

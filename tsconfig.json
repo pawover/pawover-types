@@ -8,12 +8,6 @@
     "moduleDetection": "force",
     "noEmit": true,
     "declaration": false,
-    "declarationMap": false,
-    "emitDeclarationOnly": false,
-    "rootDir": ".",
-    "baseUrl": ".",
-    "types": []
-  },
-  "include": ["*.config.ts", ".cache/*.d.ts", "src/**/*"],
-  "exclude": ["node_modules"]
+    "rootDir": "."
+  }
 }
