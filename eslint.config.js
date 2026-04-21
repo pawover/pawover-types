@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { defineConfig } from "eslint/config";
 
 import eslintTs from "typescript-eslint";
@@ -27,7 +28,8 @@ export default defineConfig([
     languageOptions: {
       parser: eslintTs.parser,
       parserOptions: {
-        project: "./tsconfig.json",
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
         sourceType: "module",
         ecmaVersion: 2020,
         ecmaFeatures: {

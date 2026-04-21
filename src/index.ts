@@ -10,7 +10,9 @@ export type TreeLike<T extends AnyObject, CK extends string = "children"> = T & 
 export type AnyFunction<P extends any[] = any[], R = any> = (...arg: P) => R;
 /** 描述异步函数类型 */
 export type AnyAsyncFunction<P extends any[] = any[], R = any> = (...args: P) => Promise<R>;
+/** 描述生成器函数类型 */
 export type AnyGeneratorFunction<P extends any[] = any[], T = any, R = any, N = any> = (...args: P) => Generator<T, R, N>;
+/** 描述异步生成器函数类型 */
 export type AnyAsyncGeneratorFunction<P extends any[] = any[], T = any, R = any, N = any> = (...args: P) => AsyncGenerator<T, R, N>;
 
 export type * from "./api";
