@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@pawover/eslint-rules':
-        specifier: 0.0.0-beta.14
-        version: 0.0.0-beta.14(@stylistic/eslint-plugin@5.10.0(eslint@10.2.1(jiti@2.6.1)))(eslint-plugin-antfu@3.2.2(eslint@10.2.1(jiti@2.6.1)))(eslint@10.2.1(jiti@2.6.1))(typescript-eslint@8.59.0(eslint@10.2.1(jiti@2.6.1))(typescript@6.0.3))(typescript@6.0.3)
+        specifier: 0.0.2
+        version: 0.0.2(@stylistic/eslint-plugin@5.10.0(eslint@10.2.1(jiti@2.6.1)))(eslint-plugin-antfu@3.2.2(eslint@10.2.1(jiti@2.6.1)))(eslint@10.2.1(jiti@2.6.1))(typescript-eslint@8.59.0(eslint@10.2.1(jiti@2.6.1))(typescript@6.0.3))(typescript@6.0.3)
       '@stylistic/eslint-plugin':
         specifier: ^5.10.0
         version: 5.10.0(eslint@10.2.1(jiti@2.6.1))
@@ -153,15 +153,15 @@ packages:
   '@oxc-project/types@0.126.0':
     resolution: {integrity: sha512-oGfVtjAgwQVVpfBrbtk4e1XDyWHRFta6BS3GWVzrF8xYBT2VGQAk39yJS/wFSMrZqoiCU4oghT3Ch0HaHGIHcQ==}
 
-  '@pawover/eslint-rules@0.0.0-beta.14':
-    resolution: {integrity: sha512-Q8g4VYBJeOtOWU5CJl9PpofYQ4amqxhXGrEfKOASHk8KlMki5ig8DGZ7qoFXhS6VfvUzwDjACXiPEkOge4siCQ==}
+  '@pawover/eslint-rules@0.0.2':
+    resolution: {integrity: sha512-I4/apGsHKRvWWLjKzI8tRY0RmIghC/r1PWam23Ce/dhwe7YeV6vgslzXfBAjW837xeWMZGfIDsDvU8fIZYOBMg==}
     engines: {node: '>=22.22.0'}
     peerDependencies:
-      '@eslint-react/eslint-plugin': '>=3.0.0'
+      '@eslint-react/eslint-plugin': '>=4.2.3'
       '@stylistic/eslint-plugin': '>=5.10.0'
       eslint: '>=10.0.3'
       eslint-plugin-antfu: '>=3.2.2'
-      eslint-plugin-import-lite: '>=0.5.2'
+      eslint-plugin-import-lite: '>=0.6.0'
       eslint-plugin-react-hooks: '>=7.0.1'
       eslint-plugin-simple-import-sort: '>=13.0.0'
       eslint-plugin-vue: '>=10.8.0'
@@ -1008,7 +1008,7 @@ snapshots:
 
   '@oxc-project/types@0.126.0': {}
 
-  '@pawover/eslint-rules@0.0.0-beta.14(@stylistic/eslint-plugin@5.10.0(eslint@10.2.1(jiti@2.6.1)))(eslint-plugin-antfu@3.2.2(eslint@10.2.1(jiti@2.6.1)))(eslint@10.2.1(jiti@2.6.1))(typescript-eslint@8.59.0(eslint@10.2.1(jiti@2.6.1))(typescript@6.0.3))(typescript@6.0.3)':
+  '@pawover/eslint-rules@0.0.2(@stylistic/eslint-plugin@5.10.0(eslint@10.2.1(jiti@2.6.1)))(eslint-plugin-antfu@3.2.2(eslint@10.2.1(jiti@2.6.1)))(eslint@10.2.1(jiti@2.6.1))(typescript-eslint@8.59.0(eslint@10.2.1(jiti@2.6.1))(typescript@6.0.3))(typescript@6.0.3)':
     dependencies:
       eslint: 10.2.1(jiti@2.6.1)
     optionalDependencies:
