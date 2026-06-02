@@ -7,6 +7,7 @@ export default defineConfig([
       react: "src/react.ts",
     },
     deps: {
+      onlyBundle: ["tagged-tag", "type-fest"],
       alwaysBundle: ["type-fest"],
     },
     dts: true,
