@@ -8,11 +8,11 @@
     "moduleDetection": "force",
     "noEmit": false,
     "declaration": true,
-    "declarationMap": true,
+    "declarationMap": false,
+    "declarationDir": "dist/types",
     "emitDeclarationOnly": true,
     "rootDir": ".",
-    "outDir": "dist",
-    "declarationDir": "dist/types"
+    "outDir": "dist"
   },
   "include": ["src/**/*"]
 }

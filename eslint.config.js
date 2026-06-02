@@ -1,9 +1,9 @@
 // @ts-nocheck
 import { defineConfig } from "eslint/config";
 
-import eslintTs from "typescript-eslint";
 import eslintPluginStylistic from "@stylistic/eslint-plugin";
 import eslintPluginAntfu from "eslint-plugin-antfu";
+import eslintTs from "typescript-eslint";
 
 import eslintRules from "@pawover/eslint-rules";
 
@@ -21,10 +21,10 @@ const plugins = {
 
 export default defineConfig([
   {
-    ignores: [...eslintRules.GLOB_EXCLUDE, "eslint.config.js"],
+    ignores: [...eslintRules.GLOB_EXCLUDE, "**/.cache"],
   },
   {
-    files: ["**/*.{js,jsx,ts,tsx}"],
+    files: ["**/*.{js,cjs,mjs,jsx,ts,tsx}"],
     languageOptions: {
       parser: eslintTs.parser,
       parserOptions: {
@@ -47,6 +47,7 @@ export default defineConfig([
       ...eslintRules.typescript,
       ...eslintRules.stylistic,
       ...eslintRules.antfu,
+      "stylistic/no-multiple-empty-lines": [2, { max: 1, maxEOF: 1, maxBOF: 0 }],
     },
   },
 ]);
