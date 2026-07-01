@@ -47,6 +47,7 @@ export default defineConfig([
       ...eslintRules.typescript,
       ...eslintRules.stylistic,
       ...eslintRules.antfu,
+      "ts/no-explicit-any": 0,
       "stylistic/no-multiple-empty-lines": [2, { max: 1, maxEOF: 1, maxBOF: 0 }],
     },
   },
